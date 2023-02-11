@@ -5,3 +5,66 @@
 	margin: 0;
 	padding: 0;
 }
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.box {
+		border-radius: 10px;
+		box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.5);
+
+		.toolbox {
+			padding: 15px 25px;
+			display: flex;
+			column-gap: 20px;
+			justify-content: center;
+			border: 1px solid rgb(167, 97, 97);
+
+			.toobox-wrap {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				column-gap: 20px;
+
+				.toolbox__btn {
+					padding: 15px 25px;
+					border-radius: 15px;
+					font-size: 15px;
+					background: rgb(52, 82, 231);
+					color: #fff;
+					border: none;
+					cursor: pointer;
+				}
+
+				.toolbox__number {
+					// padding: 15px 25px;
+					align-items: center;
+					border-radius: 15px;
+					font-size: 15px;
+				}
+
+				.toolbox__color {
+					margin: 9px 0px;
+					border-radius: 5px;
+					// font-size: 15px;
+				}
+			}
+
+			.drawing-table {
+				width: 200px;
+				height: 500px;
+			}
+		}
+
+		.drawing-table {
+			width: 700px;
+			height: 500px;
+			border: 1px solid lime;
+		}
+	}
+}
