@@ -31,6 +31,23 @@ function drawLine(x1, y1, x2, y2) {
 	context.stroke();
 }
 
+// EVENTS
+
+// this function clear everything from point 0,0, to last point of canvas
+newProjektBtn.addEventListener('click', function (e) {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+// change size of drawiing line by taking value of input "size"
+sizeInput.addEventListener('change', function (e) {
+	size = document.getElementById('size').value;
+});
+
+// change color of drawiing line by taking value of input "color"
+colorInput.addEventListener('change', function (e) {
+	color = document.getElementById('color').value;
+});
+
 canvas.addEventListener('mousedown', function (e) {
 	isMoseDown = true;
 
@@ -62,5 +79,3 @@ canvas.addEventListener('mouseup', function (e) {
 
 window.addEventListener('resize', setCanvasSize);
 setCanvasSize();
-
-size.addEventListener('input');
