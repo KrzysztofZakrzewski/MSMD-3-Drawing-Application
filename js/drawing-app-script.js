@@ -8,13 +8,14 @@ const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
 
 const context = canvas.getContext('2d');
-let isMoseDown = false;
+let isMouseDown = false;
 let color = '#000';
 let size = 10;
 let x, y;
 
 // FUNCTIONS
 
+// this function draws a basic circle in the canvas.
 function drawCircle(x, y) {
 	context.beginPath();
 	context.arc(x, y, size, 0, Math.PI * 2);
@@ -22,6 +23,18 @@ function drawCircle(x, y) {
 	context.fill();
 }
 
+// this function starts drawing
+// changes the value of let isMouseDown to true
+// sets X and Y to the location where the mouse is.
+function startDrawing(e) {
+	isMouseDown = true;
+
+	x = e.offsetX;
+	y = e.offsetY;
+}
+
+// this function draws a line from one point to another, where the canvas draws dots, so we have a continuous line.
+// fhis function is called in the "constantLineDrawing()" function.
 function drawLine(x1, y1, x2, y2) {
 	context.beginPath();
 	context.moveTo(x1, y1);
@@ -34,6 +47,37 @@ function drawLine(x1, y1, x2, y2) {
 // this function clear everything from point 0,0, to last point of canvas - "toolbox__btn"
 function clearProject() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+//
+// this function draws when the mouse is down
+function constantLineDrawing(e) {
+	// if mouse is not doawn we quit
+	if (!isMouseDown) {
+		return;
+	}
+
+	// Take the values (x,y) of the current mouse location.
+
+	let x2 = e.offsetX;
+	let y2 = e.offsetY;
+
+	drawCircle(x2, y2);
+	drawLine(x, y, x2, y2);
+
+	// first point become secont etc.
+	x = x2;
+	y = y2;
+}
+
+// 
+// this function stops drawing.
+// "e" is not necessary
+function stopDrawing() {
+	isMouseDown = false;
+
+	x = null;
+	y = null;
 }
 
 //
@@ -55,6 +99,7 @@ function changeColor() {
 }
 
 // EVENTS
+// EventLitener for desktop
 
 // this eventListener activate function "clearProject"
 newProjektBtn.addEventListener('click', clearProject);
@@ -65,31 +110,11 @@ sizeInput.addEventListener('change', setLineSizeBasedOnInputValue);
 // this event activate "function changecolor()"
 colorInput.addEventListener('change', changeColor);
 
-canvas.addEventListener('mousedown', function (e) {
-	isMoseDown = true;
+// this event activate "function startDrawing()"
+canvas.addEventListener('mousedown', startDrawing);
 
-	x = e.offsetX;
-	y = e.offsetY;
-});
+// this event activate "function constantLineDrawing()"
+canvas.addEventListener('mousemove', constantLineDrawing);
 
-canvas.addEventListener('mousemove', function (e) {
-	if (!isMoseDown) {
-		return;
-	}
-
-	let x2 = e.offsetX;
-	let y2 = e.offsetY;
-
-	drawCircle(x2, y2);
-	drawLine(x, y, x2, y2);
-
-	x = x2;
-	y = y2;
-});
-
-canvas.addEventListener('mouseup', function (e) {
-	isMoseDown = false;
-
-	x = null;
-	y = null;
-});
+// this event activate "function stopDrawing"
+canvas.addEventListener('mouseup', stopDrawing );
