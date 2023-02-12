@@ -41,6 +41,13 @@ newProjektBtn.addEventListener('click', function (e) {
 // change size of drawiing line by taking value of input "size"
 sizeInput.addEventListener('change', function (e) {
 	size = document.getElementById('size').value;
+	if (this.value <= 1) {
+		this.value = 1;
+	}
+	// need to upgrade to make evrywere functions and abadon all functions in eddEves
+
+	drawCircle();
+	drawLine();
 });
 
 // change color of drawiing line by taking value of input "color"
@@ -76,6 +83,3 @@ canvas.addEventListener('mouseup', function (e) {
 	x = null;
 	y = null;
 });
-
-window.addEventListener('resize', setCanvasSize);
-setCanvasSize();
