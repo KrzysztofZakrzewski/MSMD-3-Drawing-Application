@@ -31,29 +31,39 @@ function drawLine(x1, y1, x2, y2) {
 	context.stroke();
 }
 
-// EVENTS
-
-// this function clear everything from point 0,0, to last point of canvas
-newProjektBtn.addEventListener('click', function (e) {
+// this function clear everything from point 0,0, to last point of canvas - "toolbox__btn"
+function clearProject() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
-});
+}
 
-// change size of drawiing line by taking value of input "size"
-sizeInput.addEventListener('change', function (e) {
+//
+// this function changes the size of the line based on the value taken from the input of "toolbox__number"
+function setLineSizeBasedOnInputValue() {
 	size = document.getElementById('size').value;
 	if (this.value <= 1) {
 		this.value = 1;
 	}
-	// need to upgrade to make evrywere functions and abadon all functions in eddEves
 
 	drawCircle();
 	drawLine();
-});
+}
 
-// change color of drawiing line by taking value of input "color"
-colorInput.addEventListener('change', function (e) {
+//
+// this function changes the color of the line based on the value taken from the input of "toolbox__color"
+function changeColor() {
 	color = document.getElementById('color').value;
-});
+}
+
+// EVENTS
+
+// this eventListener activate function "clearProject"
+newProjektBtn.addEventListener('click', clearProject);
+
+// this event activate function "setLineSizeBasedOnInputValue()"
+sizeInput.addEventListener('change', setLineSizeBasedOnInputValue);
+
+// this event activate "function changecolor()"
+colorInput.addEventListener('change', changeColor);
 
 canvas.addEventListener('mousedown', function (e) {
 	isMoseDown = true;
