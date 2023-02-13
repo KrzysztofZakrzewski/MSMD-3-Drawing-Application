@@ -70,7 +70,7 @@ function constantLineDrawing(e) {
 	y = y2;
 }
 
-// 
+//
 // this function stops drawing.
 // "e" is not necessary
 function stopDrawing() {
@@ -117,4 +117,4 @@ canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', constantLineDrawing);
 
 // this event activate "function stopDrawing"
-canvas.addEventListener('mouseup', stopDrawing );
+canvas.addEventListener('mouseup', stopDrawing);
