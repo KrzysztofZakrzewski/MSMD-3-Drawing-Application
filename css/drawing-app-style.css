@@ -38,6 +38,7 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.5);
           box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.5);
+  overflow: hidden;
 }
 
 .wrapper .box .toolbox {
