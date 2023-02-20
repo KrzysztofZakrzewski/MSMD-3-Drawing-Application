@@ -14,6 +14,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/07/14/33/colored-pencil-2604456_960_720.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .wrapper {
@@ -53,8 +56,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #a76161;
-  background-color: #ccdada;
+  background-color: #c37129;
 }
 
 .wrapper .box .toolbox .toobox-wrap {
@@ -78,7 +80,7 @@ body {
   padding: 15px 25px;
   border-radius: 15px;
   font-size: 15px;
-  background: #3452e7;
+  background: rgba(31, 65, 232, 0.809);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -87,7 +89,7 @@ body {
 }
 
 .wrapper .box .toolbox .toobox-wrap .toolbox__btn:hover {
-  background: #348ee7;
+  background: rgba(9, 94, 180, 0.89);
 }
 
 .wrapper .box .toolbox .toobox-wrap .toolbox__number {
@@ -109,5 +111,9 @@ body {
   margin: 9px 0px;
   border-radius: 5px;
   border: none;
+}
+
+.wrapper .box .drawing-table {
+  background: #fff;
 }
 /*# sourceMappingURL=drawing-app-style.css.map */
