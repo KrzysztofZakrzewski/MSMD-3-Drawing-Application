@@ -99,6 +99,47 @@ function changeColor() {
 }
 
 // EVENTS
+
+canvas.addEventListener('touchstart', function(event) {
+  // Zablokuj domyślne zachowanie przeglądarki
+//   event.preventDefault();
+
+  // take position of tuch
+  const touchX = event.touches[0].pageX - canvas.offsetLeft;
+  const touchY = event.touches[0].pageY - canvas.offsetTop;
+
+  // star drowing
+  context.beginPath();
+  context.moveTo(touchX, touchY);
+  context.strokeStyle = color;
+});
+
+canvas.addEventListener('touchmove', function(event) {
+  // Zablokuj domyślne zachowanie przeglądarki
+//   event.preventDefault();
+
+  // Pobierz pozycję dotknięcia
+  const touchX = event.touches[0].pageX - canvas.offsetLeft;
+  const touchY = event.touches[0].pageY - canvas.offsetTop;
+
+  // continue od drawing
+  context.lineTo(touchX, touchY);
+  context.stroke();
+});
+
+canvas.addEventListener('touchend', function(event) {
+  // end of rowing
+  context.closePath();
+});
+
+
+
+
+
+
+
+
+
 // EventLitener for desktop
 
 // this eventListener activate function "clearProject"
