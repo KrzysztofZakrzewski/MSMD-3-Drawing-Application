@@ -100,45 +100,36 @@ function changeColor() {
 
 // EVENTS
 
-canvas.addEventListener('touchstart', function(event) {
-  // Zablokuj domyślne zachowanie przeglądarki
-//   event.preventDefault();
+//
+// Functions for MOBILE
 
-  // take position of tuch
-  const touchX = event.touches[0].pageX - canvas.offsetLeft;
-  const touchY = event.touches[0].pageY - canvas.offsetTop;
+function startDrawingMobile(e) {
+	// Zablokuj domyślne zachowanie przeglądarki
+	e.preventDefault();
+	const touchX = e.touches[0].pageX - canvas.offsetLeft;
+	const touchY = e.touches[0].pageY - canvas.offsetTop;
 
-  // star drowing
-  context.beginPath();
-  context.moveTo(touchX, touchY);
-  context.strokeStyle = color;
-});
+	context.beginPath();
+	context.moveTo(touchX, touchY);
+	context.strokeStyle = color;
+}
 
-canvas.addEventListener('touchmove', function(event) {
-  // Zablokuj domyślne zachowanie przeglądarki
-//   event.preventDefault();
+function constantLineDrawingMobile(e) {
+	// Zablokuj domyślne zachowanie przeglądarki
+	e.preventDefault();
 
-  // Pobierz pozycję dotknięcia
-  const touchX = event.touches[0].pageX - canvas.offsetLeft;
-  const touchY = event.touches[0].pageY - canvas.offsetTop;
+	// Pobierz pozycję dotknięcia
+	const touchX = e.touches[0].pageX - canvas.offsetLeft;
+	const touchY = e.touches[0].pageY - canvas.offsetTop;
 
-  // continue od drawing
-  context.lineTo(touchX, touchY);
-  context.stroke();
-});
+	// continue od drawing
+	context.lineTo(touchX, touchY);
+	context.stroke();
+}
 
-canvas.addEventListener('touchend', function(event) {
-  // end of rowing
-  context.closePath();
-});
-
-
-
-
-
-
-
-
+function stopDrawingMobile() {
+	context.closePath();
+}
 
 // EventLitener for desktop
 
@@ -159,3 +150,11 @@ canvas.addEventListener('mousemove', constantLineDrawing);
 
 // this event activate "function stopDrawing"
 canvas.addEventListener('mouseup', stopDrawing);
+
+// Events for MOBILE
+
+canvas.addEventListener('touchstart', startDrawingMobile);
+
+canvas.addEventListener('touchmove', constantLineDrawingMobile);
+
+canvas.addEventListener('touchend', startDrawingMobile);
