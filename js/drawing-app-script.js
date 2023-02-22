@@ -105,25 +105,24 @@ function changeColor() {
 
 function startDrawingMobile(e) {
 	// Zablokuj domyślne zachowanie przeglądarki
-	e.preventDefault();
-	const touchX = e.touches[0].pageX - canvas.offsetLeft;
-	const touchY = e.touches[0].pageY - canvas.offsetTop;
-
+	// e.preventDefault();
+	let x = e.touches[0].pageX - canvas.offsetLeft;
+	let y = e.touches[0].pageY - canvas.offsetTop;
 	context.beginPath();
-	context.moveTo(touchX, touchY);
+	context.moveTo(x, y);
 	context.strokeStyle = color;
 }
 
 function constantLineDrawingMobile(e) {
 	// Zablokuj domyślne zachowanie przeglądarki
-	e.preventDefault();
+	// e.preventDefault();
 
 	// Pobierz pozycję dotknięcia
-	const touchX = e.touches[0].pageX - canvas.offsetLeft;
-	const touchY = e.touches[0].pageY - canvas.offsetTop;
+	let x = e.touches[0].pageX - canvas.offsetLeft;
+	let y = e.touches[0].pageY - canvas.offsetTop;
 
 	// continue od drawing
-	context.lineTo(touchX, touchY);
+	context.lineTo(x, y);
 	context.stroke();
 }
 
