@@ -98,37 +98,93 @@ function changeColor() {
 	color = document.getElementById('color').value;
 }
 
-// EVENTS
-
 //
 // Functions for MOBILE
 
-function startDrawingMobile(e) {
-	// Zablokuj domyślne zachowanie przeglądarki
-	// e.preventDefault();
-	let x = e.touches[0].pageX - canvas.offsetLeft;
-	let y = e.touches[0].pageY - canvas.offsetTop;
+function drawCircleMobile(x, y) {
 	context.beginPath();
-	context.moveTo(x, y);
-	context.strokeStyle = color;
+	context.arc(x, y, size, 0, Math.PI * 2);
+	context.fillStyle = color;
+	context.fill();
 }
 
-function constantLineDrawingMobile(e) {
-	// Zablokuj domyślne zachowanie przeglądarki
-	// e.preventDefault();
+// this function starts drawing
+// changes the value of let isMouseDown to true
+// sets X and Y to the location where the touch event occurs.
+function startDrawingMobile(e) {
+	isMouseDown = true;
 
-	// Pobierz pozycję dotknięcia
-	let x = e.touches[0].pageX - canvas.offsetLeft;
-	let y = e.touches[0].pageY - canvas.offsetTop;
+	x = e.touches[0].clientX - rect.left;
+	y = e.touches[0].clientY - rect.top;
+}
 
-	// continue od drawing
-	context.lineTo(x, y);
+// this function draws a line from one point to another, where the canvas draws dots, so we have a continuous line.
+// this function is called in the "constantLineDrawing()" function.
+function drawLineMobile(x1, y1, x2, y2) {
+	context.beginPath();
+	context.moveTo(x1, y1);
+	context.lineTo(x2, y2);
+	context.strokeStyle = color;
+	context.lineWidth = size * 2;
 	context.stroke();
 }
+
+// this function clear everything from point 0,0, to last point of canvas - "toolbox__btn"
+function clearProject() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+//
+// this function draws when the touch is moved
+function constantLineDrawingMobile(e) {
+	// if touch is not moving we quit
+	// if (!isMouseDown) {
+	// 	return;
+	// }
+
+	// Take the values (x,y) of the current touch location.
+
+	let x2 = e.touches[0].clientX - rect.left;
+	let y2 = e.touches[0].clientY - rect.top;
+
+	drawCircleMobile(x2, y2);
+	drawLineMobile(x, y, x2, y2);
+
+	// first point become secont etc.
+	x = x2;
+	y = y2;
+}
+
+//
+// this function stops drawing.
+// "e" is not necessary
+// function stopDrawing() {
+// 	isMouseDown = false;
+
+// 	x = null;
+// 	y = null;
+// }
+
+//
+// this function changes the size of the line based on the value taken from the input of "toolbox__number"
+function setLineSizeBasedOnInputValueMobile() {
+	size = document.getElementById('size').value;
+	if (this.value <= 1) {
+		this.value = 1;
+	}
+
+	drawCircleMobile();
+	drawLineMobile();
+}
+
 
 function stopDrawingMobile() {
 	context.closePath();
 }
+
+let rect = canvas.getBoundingClientRect();
+
+// EVENTS
 
 // EventLitener for desktop
 
