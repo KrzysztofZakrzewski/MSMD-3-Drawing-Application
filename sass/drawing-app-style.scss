@@ -80,12 +80,30 @@ body {
 					border-radius: 5px;
 					border: none;
 				}
+
+				.save {
+					display: none;
+				}
 			}
 		}
 
 		.drawing-table {
 			background: #fff;
 			touch-action: none;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.wrapper {
+		.box {
+			.toolbox {
+				.toobox-wrap {
+					.save {
+						display:  flex;
+					}
+				}
+			}
 		}
 	}
 }
