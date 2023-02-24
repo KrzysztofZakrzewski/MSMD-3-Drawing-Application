@@ -36,6 +36,12 @@ function setCanvasSize() {
 	canvas.width = canvasParentRect.width;
 }
 
+// 
+// this function resaze the canvas when size of the window change suddenly
+function resizeCanvasWithSizeOfWindow() {
+	setCanvasSize();
+}
+
 //
 // this function make Background white
 function makeBackgroundWhite() {
@@ -241,6 +247,8 @@ canvas.addEventListener('mousemove', constantLineDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 
 saveImg.addEventListener('click', saveImgFromCanvas);
+
+window.addEventListener('resize', resizeCanvasWithSizeOfWindow)
 
 // Events for MOBILE
 
