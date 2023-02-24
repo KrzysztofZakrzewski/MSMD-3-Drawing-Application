@@ -8,6 +8,8 @@ const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
 
 const context = canvas.getContext('2d');
+// This variable ("let rect") should be declared as "let" in case the size of the browser window changes.
+let rect = canvas.getBoundingClientRect();
 let isMouseDown = false;
 let color = '#000';
 let size = 10;
@@ -100,6 +102,8 @@ function changeColor() {
 
 //
 // Functions for MOBILE
+// **********************
+// **********************
 
 function drawCircleMobile(x, y) {
 	context.beginPath();
@@ -120,35 +124,31 @@ function startDrawingMobile(e) {
 
 // this function draws a line from one point to another, where the canvas draws dots, so we have a continuous line.
 // this function is called in the "constantLineDrawing()" function.
-function drawLineMobile(x1, y1, x2, y2) {
-	context.beginPath();
-	context.moveTo(x1, y1);
-	context.lineTo(x2, y2);
-	context.strokeStyle = color;
-	context.lineWidth = size * 2;
-	context.stroke();
-}
 
-// this function clear everything from point 0,0, to last point of canvas - "toolbox__btn"
-function clearProject() {
-	context.clearRect(0, 0, canvas.width, canvas.height);
-}
+// **
+// I DECIDED TO REMOVE THIS FUNCTION BECAUSE IT REPEATS ITSELF.
+// **
+
+// function drawLineMobile(x1, y1, x2, y2) {
+// 	context.beginPath();
+// 	context.moveTo(x1, y1);
+// 	context.lineTo(x2, y2);
+// 	context.strokeStyle = color;
+// 	context.lineWidth = size * 2;
+// 	context.stroke();
+// }
 
 //
 // this function draws when the touch is moved
 function constantLineDrawingMobile(e) {
-	// if touch is not moving we quit
-	// if (!isMouseDown) {
-	// 	return;
-	// }
 
 	// Take the values (x,y) of the current touch location.
 
 	let x2 = e.touches[0].clientX - rect.left;
 	let y2 = e.touches[0].clientY - rect.top;
 
-	drawCircleMobile(x2, y2);
-	drawLineMobile(x, y, x2, y2);
+	drawCircle(x2, y2);
+	drawLine(x, y, x2, y2);
 
 	// first point become secont etc.
 	x = x2;
@@ -156,36 +156,30 @@ function constantLineDrawingMobile(e) {
 }
 
 //
-// this function stops drawing.
-// "e" is not necessary
-// function stopDrawing() {
-// 	isMouseDown = false;
-
-// 	x = null;
-// 	y = null;
-// }
-
-//
 // this function changes the size of the line based on the value taken from the input of "toolbox__number"
-function setLineSizeBasedOnInputValueMobile() {
-	size = document.getElementById('size').value;
-	if (this.value <= 1) {
-		this.value = 1;
-	}
 
-	drawCircleMobile();
-	drawLineMobile();
-}
+// **
+// I DECIDED TO REMOVE THIS FUNCTION BECAUSE IT REPEATS ITSELF.
+// **
+
+// function setLineSizeBasedOnInputValue() {
+// 	size = document.getElementById('size').value;
+// 	if (this.value <= 1) {
+// 		this.value = 1;
+// 	}
+
+// 	drawCircle();
+// 	drawLine();
+// }
 
 
 function stopDrawingMobile() {
 	context.closePath();
 }
 
-let rect = canvas.getBoundingClientRect();
+
 
 // EVENTS
-
 // EventLitener for desktop
 
 // this eventListener activate function "clearProject"
