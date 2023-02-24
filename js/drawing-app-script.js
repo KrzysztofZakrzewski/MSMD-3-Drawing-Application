@@ -6,6 +6,7 @@ const canvas = document.getElementById('canvas');
 const newProjektBtn = document.getElementById('new-projekt');
 const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
+const saveImg = document.getElementById('save-img');
 
 const context = canvas.getContext('2d');
 // This variable ("let rect") should be declared as "let" in case the size of the browser window changes.
@@ -16,6 +17,14 @@ let size = 10;
 let x, y;
 
 // FUNCTIONS
+
+
+// 
+// this function make Background white
+function makeBackgroundWhite() {
+	context.fillStyle = 'white';
+	context.fillRect(0, 0, canvas.width, canvas.height);
+}
 
 // this function draws a basic circle in the canvas.
 function drawCircle(x, y) {
@@ -100,17 +109,25 @@ function changeColor() {
 	color = document.getElementById('color').value;
 }
 
+function saveImgFromCanvas() {
+	const canvas = document.getElementById('canvas');
+	const link = document.createElement('a');
+	link.download = 'canvas.jpg';
+	link.href = canvas.toDataURL('image/jpeg');
+	link.click();
+}
+
 //
 // Functions for MOBILE
 // **********************
 // **********************
 
-// 
+//
 // This function prevent scroling durig drawing
 //  Chat GPT help
 function preventTouchScrolling(e) {
 	e.preventDefault();
-  }
+}
 
 function drawCircleMobile(x, y) {
 	context.beginPath();
@@ -148,7 +165,6 @@ function startDrawingMobile(e) {
 //
 // this function draws when the touch is moved
 function constantLineDrawingMobile(e) {
-
 	// Take the values (x,y) of the current touch location.
 
 	let x2 = e.touches[0].clientX - rect.left;
@@ -179,12 +195,11 @@ function constantLineDrawingMobile(e) {
 // 	drawLine();
 // }
 
-
 function stopDrawingMobile() {
 	context.closePath();
 }
 
-
+makeBackgroundWhite();
 
 // EVENTS
 // EventLitener for desktop
@@ -207,6 +222,8 @@ canvas.addEventListener('mousemove', constantLineDrawing);
 // this event activate "function stopDrawing"
 canvas.addEventListener('mouseup', stopDrawing);
 
+saveImg.addEventListener('click', saveImgFromCanvas);
+
 // Events for MOBILE
 
 canvas.addEventListener('touchstart', startDrawingMobile);
@@ -215,4 +232,4 @@ canvas.addEventListener('touchmove', constantLineDrawingMobile);
 
 canvas.addEventListener('touchend', startDrawingMobile);
 
-canvas.addEventListener("touchmove", preventTouchScrolling, { passive: false });
+canvas.addEventListener('touchmove', preventTouchScrolling, { passive: false });

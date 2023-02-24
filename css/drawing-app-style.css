@@ -113,10 +113,6 @@ body {
   border: none;
 }
 
-.wrapper .box .toolbox .toobox-wrap .save {
-  display: none;
-}
-
 .wrapper .box .drawing-table {
   background: #fff;
   -ms-touch-action: none;
