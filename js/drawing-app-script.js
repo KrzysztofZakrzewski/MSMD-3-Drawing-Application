@@ -105,6 +105,13 @@ function changeColor() {
 // **********************
 // **********************
 
+// 
+// This function prevent scroling durig drawing
+//  Chat GPT help
+function preventTouchScrolling(e) {
+	e.preventDefault();
+  }
+
 function drawCircleMobile(x, y) {
 	context.beginPath();
 	context.arc(x, y, size, 0, Math.PI * 2);
@@ -207,3 +214,5 @@ canvas.addEventListener('touchstart', startDrawingMobile);
 canvas.addEventListener('touchmove', constantLineDrawingMobile);
 
 canvas.addEventListener('touchend', startDrawingMobile);
+
+canvas.addEventListener("touchmove", preventTouchScrolling, { passive: false });
