@@ -7,6 +7,7 @@ const newProjektBtn = document.getElementById('new-projekt');
 const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
 const saveImg = document.getElementById('save-img');
+let parentOfCanvas = canvas.parentNode;
 
 const context = canvas.getContext('2d');
 // This variable ("let rect") should be declared as "let" in case the size of the browser window changes.
@@ -18,8 +19,24 @@ let x, y;
 
 // FUNCTIONS
 
+function setCanvasSize() {
+	let canvasParentRect = parentOfCanvas.getBoundingClientRect();
 
-// 
+	// this block calculates the sum of heights of other children of the canvas parent element
+	let siblingsHeight = 0;
+	let siblings = parentOfCanvas.children;
+	for (let i = 0; i < siblings.length; i++) {
+	  if (siblings[i] !== canvas) {
+		siblingsHeight += siblings[i].offsetHeight;
+	  }
+	}
+  
+	// Set the height of the canvas to the height of its parent element without the height of its other children.
+	canvas.height = canvasParentRect.height - siblingsHeight;
+	canvas.width = canvasParentRect.width;
+}
+
+//
 // this function make Background white
 function makeBackgroundWhite() {
 	context.fillStyle = 'white';
@@ -199,6 +216,7 @@ function stopDrawingMobile() {
 	context.closePath();
 }
 
+setCanvasSize();
 makeBackgroundWhite();
 
 // EVENTS
