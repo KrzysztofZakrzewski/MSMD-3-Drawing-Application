@@ -115,5 +115,7 @@ body {
 
 .wrapper .box .drawing-table {
   background: #fff;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 /*# sourceMappingURL=drawing-app-style.css.map */
