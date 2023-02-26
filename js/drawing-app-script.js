@@ -12,6 +12,8 @@ let parentOfCanvas = canvas.parentNode;
 const context = canvas.getContext('2d');
 // This variable ("let rect") should be declared as "let" in case the size of the browser window changes.
 let rect = canvas.getBoundingClientRect();
+// variable for unwantet clear canvas
+let prevWindowHeight = window.innerHeight;
 let isMouseDown = false;
 let color = '#000';
 let size = 10;
@@ -26,17 +28,25 @@ function setCanvasSize() {
 	let siblingsHeight = 0;
 	let siblings = parentOfCanvas.children;
 	for (let i = 0; i < siblings.length; i++) {
-	  if (siblings[i] !== canvas) {
-		siblingsHeight += siblings[i].offsetHeight;
-	  }
+		if (siblings[i] !== canvas) {
+			siblingsHeight += siblings[i].offsetHeight;
+		}
 	}
-  
+
+	let imageData = canvas.toDataURL("image/png");
+
 	// Set the height of the canvas to the height of its parent element without the height of its other children.
 	canvas.height = canvasParentRect.height - siblingsHeight;
 	canvas.width = canvasParentRect.width;
+
+	let image = new Image();
+	image.onload = function () {
+		context.drawImage(image, 0, 0);
+	};
+	image.src = imageData;
 }
 
-// 
+//
 // this function resaze the canvas when size of the window change suddenly
 function resizeCanvasWithSizeOfWindow() {
 	setCanvasSize();
@@ -135,8 +145,8 @@ function changeColor() {
 function saveImgFromCanvas() {
 	const canvas = document.getElementById('canvas');
 	const link = document.createElement('a');
-	link.download = 'canvas.jpg';
-	link.href = canvas.toDataURL('image/jpeg');
+	link.download = 'canvas.png';
+	link.href = canvas.toDataURL('image/png');
 	link.click();
 }
 
@@ -248,7 +258,7 @@ canvas.addEventListener('mouseup', stopDrawing);
 
 saveImg.addEventListener('click', saveImgFromCanvas);
 
-window.addEventListener('resize', resizeCanvasWithSizeOfWindow)
+window.addEventListener('resize', resizeCanvasWithSizeOfWindow);
 
 // Events for MOBILE
 
