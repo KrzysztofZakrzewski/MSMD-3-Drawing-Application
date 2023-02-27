@@ -13,6 +13,23 @@ body {
 	background-size: cover;
 }
 
+.popup {
+	position: absolute;
+	min-width: 90%;
+	min-height: 95%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 5px solid rgba(195, 113, 41, 0.89);
+	border-radius: 20px;
+	box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4),
+		5px 5px 15px rgba(133, 77, 27, 0.4),
+		inset -5px -5px 15px rgba(133, 77, 27, 0.4),
+		inset 5px 5px 15px rgba(133, 77, 27, 0.4);
+	background: rgba(210, 200, 200, 0.975);
+	z-index: 1;
+}
+
 .wrapper {
 	width: 90%;
 	max-width: 700px;
@@ -100,7 +117,7 @@ body {
 			.toolbox {
 				.toobox-wrap {
 					.save {
-						display:  flex;
+						display: flex;
 					}
 				}
 			}
