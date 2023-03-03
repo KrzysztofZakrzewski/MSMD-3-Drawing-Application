@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -5,6 +7,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	display: flex;
 	justify-content: center;
@@ -14,6 +17,7 @@ body {
 }
 
 .popup {
+	display: none;
 	position: absolute;
 	min-width: 90%;
 	min-height: 95%;
@@ -37,7 +41,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
+	
 	.box {
 		position: relative;
 		width: 100%;
@@ -45,7 +50,7 @@ body {
 		border-radius: 10px;
 		box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.5);
 		overflow: hidden;
-
+		
 		.toolbox {
 			position: relative;
 			width: 100%;
@@ -53,9 +58,8 @@ body {
 			display: flex;
 			column-gap: 20px;
 			justify-content: center;
-			// border: 1px solid rgb(167, 97, 97);
 			background-color: rgb(195, 113, 41);
-
+			
 			.toobox-wrap {
 				display: flex;
 				flex-wrap: wrap;
@@ -63,8 +67,9 @@ body {
 				align-items: center;
 				text-align: center;
 				column-gap: 20px;
-
+				
 				.toolbox__btn {
+					font-family: 'Poppins', sans-serif;
 					padding: 15px 25px;
 					border-radius: 15px;
 					font-size: 15px;
@@ -73,6 +78,7 @@ body {
 					border: none;
 					cursor: pointer;
 					transition: all 0.2s ease;
+					
 				}
 
 				.toolbox__btn:hover {

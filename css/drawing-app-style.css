@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -20,6 +21,7 @@ body {
 }
 
 .popup {
+  display: none;
   position: absolute;
   min-width: 90%;
   min-height: 95%;
@@ -93,6 +95,7 @@ body {
 }
 
 .wrapper .box .toolbox .toobox-wrap .toolbox__btn {
+  font-family: 'Poppins', sans-serif;
   padding: 15px 25px;
   border-radius: 15px;
   font-size: 15px;
