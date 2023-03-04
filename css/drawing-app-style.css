@@ -22,17 +22,17 @@ body {
 }
 
 body .popup {
-  display: none;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
   min-width: 90%;
   min-height: 95%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   border: 5px solid rgba(195, 113, 41, 0.89);
   border-radius: 20px;
   -webkit-box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4), 5px 5px 15px rgba(133, 77, 27, 0.4), inset -5px -5px 15px rgba(133, 77, 27, 0.4), inset 5px 5px 15px rgba(133, 77, 27, 0.4);
@@ -43,14 +43,14 @@ body .popup {
 }
 
 body .popup .popup__container {
+  position: absolute;
   padding: 10px 20px 100px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: calc(100% - 100px);
   width: 100%;
   border-radius: inherit;
   -webkit-box-orient: vertical;
@@ -121,8 +121,8 @@ body .toolbox__btn {
   color: #fff;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body .wrapper {
@@ -191,8 +191,8 @@ body .wrapper .box .toolbox .toobox-wrap .toolbox__btn {
   color: #fff;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body .wrapper .box .toolbox .toobox-wrap .toolbox__btn:hover {
@@ -232,5 +232,9 @@ body .wrapper .box .drawing-table {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+body .toolbox__btn:hover {
+  background: rgba(9, 94, 180, 0.89);
 }
 /*# sourceMappingURL=drawing-app-style.css.map */

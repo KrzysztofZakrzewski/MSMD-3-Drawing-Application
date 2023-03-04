@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+$backgound-button-color: rgba(31, 65, 232, 0.809);
+$backgound-button-color-hover: rgba(9, 94, 180, 0.89);
+$toolbox-background-color: rgb(195, 113, 41);
+$background-popup-color: rgba(210, 200, 200, 0.975);
+$red-head-color: rgb(210, 25, 25);
+
 
 *,
 *::before,
@@ -17,33 +23,33 @@ body {
 	font-family: 'Poppins', sans-serif;
 
 	.popup {
-		display: none;
 		position: absolute;
+		display: flex;
+		display: none;
 		min-width: 90%;
 		min-height: 95%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		display: flex;
 		border: 5px solid rgba(195, 113, 41, 0.89);
 		border-radius: 20px;
 		box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4),
 			5px 5px 15px rgba(133, 77, 27, 0.4),
 			inset -5px -5px 15px rgba(133, 77, 27, 0.4),
 			inset 5px 5px 15px rgba(133, 77, 27, 0.4);
-		background: rgba(210, 200, 200, 0.975);
+		background: $background-popup-color;
 		font-family: 'Poppins', sans-serif;
 
 		z-index: 5;
 
 		.popup__container {
+			position: absolute;
 			padding: 10px 20px 100px 20px;
 			display: flex;
 			// display: none;
-			position: sticky;
 			top: 0;
 			left: 0;
-			height: 100%-100px;
+			height: calc(100% - 100px);
 			width: 100%;
 			// background-color: rgba(255, 0, 0, 0.252);
 			border-radius: inherit;
@@ -59,11 +65,11 @@ body {
 				// font-family: 'Poppins', sans-serif;
 				font-size: 30px;
 				font-style: italic;
-				color: rgb(210, 25, 25);
+				color: $red-head-color;
 			}
 			h2 {
 				font-style: italic;
-				color: rgb(210, 25, 25);
+				color: $red-head-color;
 			}
 			h1 {
 				padding-top: 20px;
@@ -84,7 +90,7 @@ body {
 			height: 100px;
 			justify-content: center;
 			align-items: center;
-			background: rgba(210, 200, 200, 0.975);
+			background: $background-popup-color;
 			border-bottom-right-radius: 20px;
 			border-bottom-left-radius: 20px;
 			box-shadow: -5px 0px 15px rgba(133, 77, 27, 0),
@@ -103,12 +109,18 @@ body {
 		padding: 15px 25px;
 		border-radius: 15px;
 		font-size: 15px;
-		background: rgba(31, 65, 232, 0.809);
+		background: $backgound-button-color;
 		color: #fff;
 		border: none;
 		cursor: pointer;
-		transition: all 0.2s ease;
+		transition: all 0.4s ease;
 	}
+
+	// .toolbox__btn:hover {
+	// 	background: $backgound-button-color-hover;
+	// }
+
+	
 
 	.wrapper {
 		width: 90%;
@@ -133,7 +145,7 @@ body {
 				display: flex;
 				column-gap: 20px;
 				justify-content: center;
-				background-color: rgb(195, 113, 41);
+				background-color: $toolbox-background-color;
 
 				.toobox-wrap {
 					display: flex;
@@ -148,15 +160,15 @@ body {
 						padding: 15px 25px;
 						border-radius: 15px;
 						font-size: 15px;
-						background: rgba(31, 65, 232, 0.809);
+						background: $backgound-button-color;
 						color: #fff;
 						border: none;
 						cursor: pointer;
-						transition: all 0.2s ease;
+						transition: all 0.4s ease;
 					}
 
 					.toolbox__btn:hover {
-						background: rgba(9, 94, 180, 0.89);
+						background: $backgound-button-color-hover;
 					}
 
 					.toolbox__number {
@@ -203,5 +215,8 @@ body {
 				}
 			}
 		}
+	}
+	.toolbox__btn:hover {
+		background: $backgound-button-color-hover;
 	}
 }
