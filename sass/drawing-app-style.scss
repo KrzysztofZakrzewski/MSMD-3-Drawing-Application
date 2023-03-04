@@ -25,7 +25,7 @@ body {
 	.popup {
 		position: absolute;
 		display: flex;
-		display: none;
+		// display: none;
 		min-width: 90%;
 		min-height: 95%;
 		top: 50%;
@@ -104,7 +104,7 @@ body {
 		}
 	}
 
-	.toolbox__btn {
+	.close-info-popup__btn {
 		font-family: 'Poppins', sans-serif;
 		padding: 15px 25px;
 		border-radius: 15px;
@@ -202,6 +202,9 @@ body {
 			}
 		}
 	}
+	.close-info-popup__btn:hover {
+		background: $backgound-button-color-hover;
+	}
 
 	@media (min-width: 1024px) {
 		.wrapper {
@@ -216,7 +219,5 @@ body {
 			}
 		}
 	}
-	.toolbox__btn:hover {
-		background: $backgound-button-color-hover;
-	}
+	
 }

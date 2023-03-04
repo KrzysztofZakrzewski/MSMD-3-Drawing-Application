@@ -26,7 +26,6 @@ body .popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   min-width: 90%;
   min-height: 95%;
   top: 50%;
@@ -112,7 +111,7 @@ body .popup .popup__conteiner-fotter {
   z-index: 4;
 }
 
-body .toolbox__btn {
+body .close-info-popup__btn {
   font-family: 'Poppins', sans-serif;
   padding: 15px 25px;
   border-radius: 15px;
@@ -226,15 +225,15 @@ body .wrapper .box .drawing-table {
       touch-action: none;
 }
 
+body .close-info-popup__btn:hover {
+  background: rgba(9, 94, 180, 0.89);
+}
+
 @media (min-width: 1024px) {
   body .wrapper .box .toolbox .toobox-wrap .save {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-}
-
-body .toolbox__btn:hover {
-  background: rgba(9, 94, 180, 0.89);
 }
 /*# sourceMappingURL=drawing-app-style.css.map */
