@@ -119,6 +119,10 @@ body .popup-info-active {
 }
 
 body .popup-options {
+  display: none;
+}
+
+body .popup-options-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

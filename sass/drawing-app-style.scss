@@ -110,7 +110,15 @@ body {
 		display: flex;
 	}
 
-	.popup-options{
+	// .popup-options{
+	// 	display: flex;
+	// }
+
+	.popup-options {
+		display: none;
+	}
+
+	.popup-options-active {
 		display: flex;
 	}
 
