@@ -9,6 +9,7 @@ const openOption = document.querySelector('.options')
 const popupInfo = document.querySelector('.popup-info');
 const popupOptions = document.querySelector('.popup-options');
 const popupInfoActive = document.querySelector('.popup-info-active');
+const openInstructionsBtn = document.querySelector('.open__instructions-btn')
 
 //this function toggle info popup
 function closePopupInfo() {
@@ -23,3 +24,4 @@ function toggleOptionsPopup() {
 closePopupInfoBtn.addEventListener('click', closePopupInfo);
 closeOptionsBtn.addEventListener('click', toggleOptionsPopup)
 openOption.addEventListener('click', toggleOptionsPopup)
+openInstructionsBtn.addEventListener('click', closePopupInfo, toggleOptionsPopup)
