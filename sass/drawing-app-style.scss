@@ -98,6 +98,16 @@ body {
 					flex-direction: column;
 				}
 			}
+			.popup-section:last-child{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.popup-section:last-child>:first-child{
+				color: $red-head-color;
+				font-weight: bold;
+			}
 		}
 
 		.popup__container::-webkit-scrollbar {
