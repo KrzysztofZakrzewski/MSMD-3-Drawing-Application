@@ -18,12 +18,13 @@
             <h4>Quic & Fast</h4>
             <h2>Drawing app</h2>
             <h1>Options</h1>
-            <p>Lorem ipsum dolor sit kjsdhglsdkghsdlghskamet consectetur adipisicing elit. Delectus amet quaerat ex
-                autem rerum a ipsam eveniet pariatur nostrum, voluptatum molestias dolore dolorem quidem, minima,
-                recusandae quod nesciunt repudiandae exercitationem?</p>
+            <div class="popup-section">
+                <button class="open__instructions-btn btn">Instructions</button>
+            </div>
+            
         </div>
         <div class="popup__conteiner-fotter popup-options__conteiner-fotter">
-            <button class="close-popup-options__btn btn-close">Close</button>
+            <button class="close-popup-options__btn btn-close btn">Close</button>
         </div>
     </div>
 
@@ -32,12 +33,41 @@
             <h4>Quic & Fast</h4>
             <h2>Drawing app</h2>
             <h1>Instructions</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet quaerat ex autem rerum a ipsam
-                eveniet pariatur nostrum, voluptatum molestias dolore dolorem quidem, minima, recusandae quod nesciunt
-                repudiandae exercitationem?</p>
+          <div class="popup-section section-langue">
+              <label>
+                <span>EN</span>
+                <input type="radio" name="option" value="option1">
+                <span class="dot"></span>
+              </label>
+              <label>
+                <span>PL</span>
+                <input type="radio" name="option" value="option2">
+                <span class="dot"></span>
+              </label>
+              <label>
+                <span>UK</span>
+                <input type="radio" name="option" value="option3">
+                <span class="dot"></span>
+              </label>
+          </div>
+            <div class="popup-section">
+              <p>To jest aplikacja służąca do szybkiego tworzeniasz małych obrazków, można je zapisać na dysk, wysłaść znajomemu lub zrobić co chcesz.</p>
+            </div>
+            <div class="popup-section">
+                <p>Rozmiar:<p>
+                <input class="toolbox__number deaf-input" type="number" value="10" readonly>
+                <br>
+                <p>Służy do wybrania rozmiaru rysowanej lini.</p>
+            </div>
+            <div class="popup-section">
+                <p>Kolor:<p>
+                    <input class="toolbox__color deaf-color-info" type="color" disabled>
+                <br>
+                <p>Służy do wybrania koloru rysowanej lini.</p>
+            </div>
         </div>
         <div class="popup__conteiner-fotter popup-info__conteiner-fotter">
-            <button class="close-popup-info__btn btn-close">Close</button>
+            <button class="close-popup-info__btn btn-close btn">Close</button>
         </div>
     </div>
 
