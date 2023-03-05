@@ -50,7 +50,7 @@ body .popup .popup__container {
   display: flex;
   top: 0;
   left: 0;
-  height: calc(100% - 100px);
+  height: 100%;
   width: 100%;
   border-radius: inherit;
   -webkit-box-orient: vertical;
@@ -113,6 +113,27 @@ body .popup .popup__container .section-langue label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body .popup .popup__container .section-langue span {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 39px;
+  height: 35px;
+  background-position: center;
+  background-size: cover;
+}
+
+body .popup .popup__container .section-langue .en {
+  background-image: url("/img/flags/en_flag.png");
+}
+
+body .popup .popup__container .section-langue .pl {
+  background-image: url("/img/flags/pl_flag.png");
+}
+
+body .popup .popup__container .section-langue .ukr {
+  background-image: url("/img/flags/ukr_flag.png");
 }
 
 body .popup .popup__container .popup-section:last-child {

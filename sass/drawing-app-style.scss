@@ -50,7 +50,7 @@ body {
 			// display: none;
 			top: 0;
 			left: 0;
-			height: calc(100% - 100px);
+			height: 100%;
 			width: 100%;
 			// background-color: rgba(255, 0, 0, 0.252);
 			border-radius: inherit;
@@ -97,14 +97,34 @@ body {
 					display: flex;
 					flex-direction: column;
 				}
+
+				span {
+					display: inline-block;
+					margin-bottom: 10px;
+					width: 39px;
+					height: 35px;
+
+					background-position: center;
+					background-size: cover;
+				}
+
+				.en {
+					background-image: url('/img/flags/en_flag.png');
+				}
+				.pl {
+					background-image: url('/img/flags/pl_flag.png');
+				}
+				.ukr {
+					background-image: url('/img/flags/ukr_flag.png');
+				}
 			}
-			.popup-section:last-child{
+			.popup-section:last-child {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 			}
-			.popup-section:last-child>:first-child{
+			.popup-section:last-child > :first-child {
 				color: $red-head-color;
 				font-weight: bold;
 			}
@@ -141,7 +161,6 @@ body {
 			cursor: default;
 		}
 	}
-
 
 	.popup-info-active {
 		display: flex;
@@ -190,7 +209,7 @@ body {
 		border: none;
 	}
 
-	.deaf-color-info[disabled]{
+	.deaf-color-info[disabled] {
 		background-color: #fff;
 	}
 
