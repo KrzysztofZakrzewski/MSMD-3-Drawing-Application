@@ -134,6 +134,7 @@ body .popup .popup__conteiner-fotter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
   background: rgba(233, 219, 219, 0.975);
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -141,6 +142,10 @@ body .popup .popup__conteiner-fotter {
           box-shadow: -5px 0px 15px rgba(133, 77, 27, 0), 5px 0px 15px rgba(133, 77, 27, 0.4), inset 5px -5px 15px rgba(133, 77, 27, 0.4), inset -5px 0px 15px rgba(133, 77, 27, 0);
   border-top: 1px solid gray;
   z-index: 4;
+}
+
+body .popup .deaf-btn {
+  cursor: default;
 }
 
 body .popup-info-active {
@@ -255,6 +260,7 @@ body .wrapper .box .toolbox .toobox-wrap {
 }
 
 body .wrapper .box .toolbox .toobox-wrap .toolbox__btn {
+  display: none;
   font-family: 'Poppins', sans-serif;
   padding: 15px 25px;
   border-radius: 15px;
@@ -267,11 +273,32 @@ body .wrapper .box .toolbox .toobox-wrap .toolbox__btn {
   transition: all 0.4s ease;
 }
 
+body .wrapper .box .toolbox .toobox-wrap .toobox__new-projekt {
+  display: block;
+}
+
+body .wrapper .box .toolbox .toobox-wrap .toolbox__options {
+  display: block;
+}
+
 body .wrapper .box .toolbox .toobox-wrap .toolbox__btn:hover {
   background: rgba(9, 94, 180, 0.89);
 }
 
+body .wrapper .box .toolbox .toobox-wrap .toolbox__number {
+  display: none;
+  padding: 15px;
+  max-width: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  border: none;
+  font-size: 15px;
+}
+
 body .wrapper .box .toolbox .toobox-wrap .toolbox__color {
+  display: none;
   padding: 10px 10px;
   height: 50px;
   width: 70px;

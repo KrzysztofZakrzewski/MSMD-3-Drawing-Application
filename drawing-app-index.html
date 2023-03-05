@@ -19,12 +19,13 @@
             <h2>Drawing app</h2>
             <h1>Options</h1>
             <div class="popup-section">
-                <button class="open__instructions-btn btn">Instructions</button>
+                <!-- <button class="open__instructions-btn btn">Instructions</button> -->
             </div>
             
         </div>
         <div class="popup__conteiner-fotter popup-options__conteiner-fotter">
             <button class="close-popup-options__btn btn-close btn">Close</button>
+            <button class="open__instructions-btn btn">Instructions</button>
         </div>
     </div>
 
@@ -33,7 +34,7 @@
             <h4>Quic & Fast</h4>
             <h2>Drawing app</h2>
             <h1>Instructions</h1>
-          <div class="popup-section section-langue">
+            <div class="popup-section section-langue">
               <label>
                 <span>EN</span>
                 <input type="radio" name="option" value="option1">
@@ -49,7 +50,7 @@
                 <input type="radio" name="option" value="option3">
                 <span class="dot"></span>
               </label>
-          </div>
+            </div>
             <div class="popup-section">
               <p>To jest aplikacja służąca do szybkiego tworzeniasz małych obrazków, można je zapisać na dysk, wysłaść znajomemu lub zrobić co chcesz.</p>
             </div>
@@ -65,6 +66,24 @@
                 <br>
                 <p>Służy do wybrania koloru rysowanej lini.</p>
             </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Clear</button>
+                <br>
+                <p>Służy do wybrania wymazania tego co już narysowaliśmy.</p>
+            </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Save</button>
+                <br>
+                <p>Służy do zapisania naszego obrazka na dysku.</p>
+            </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Options</button>
+                <br>
+                <p>Służy do otworzenia okienka z opcjami</p>
+            </div>
         </div>
         <div class="popup__conteiner-fotter popup-info__conteiner-fotter">
             <button class="close-popup-info__btn btn-close btn">Close</button>
@@ -76,11 +95,11 @@
         <div class="box">
             <div class="toolbox">
                 <div class="toobox-wrap">
-                    <button class="toolbox__btn" id="new-projekt">Clear</button>
+                    <button class="toolbox__btn toobox__new-projekt" id="new-projekt">Clear</button>
                     <input class="toolbox__number" type="number" value="10" id="size">
                     <input class="toolbox__color" type="color" id="color">
-                    <button class="toolbox__btn save" id="save-img">Save</button>
-                    <button class="toolbox__btn options" id="options">Options</button>
+                    <button class="toolbox__btn toolbox__save" id="save-img">Save</button>
+                    <button class="toolbox__btn toolbox__options options" id="options">Options</button>
                 </div>
             </div>
             <canvas width="700" height="400" class="drawing-table" id="canvas"></canvas>

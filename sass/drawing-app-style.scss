@@ -114,6 +114,7 @@ body {
 			height: 100px;
 			justify-content: center;
 			align-items: center;
+			gap: 30px;
 			background: $background-popup-color;
 			border-bottom-right-radius: 15px;
 			border-bottom-left-radius: 15px;
@@ -126,7 +127,11 @@ body {
 			z-index: 4;
 			// background: rgba(0, 128, 0, 0.463);
 		}
+		.deaf-btn {
+			cursor: default;
+		}
 	}
+
 
 	.popup-info-active {
 		display: flex;
@@ -216,7 +221,10 @@ body {
 					text-align: center;
 					column-gap: 20px;
 
+					// ADD display: NONE for look how !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 					.toolbox__btn {
+						display: none;
 						font-family: 'Poppins', sans-serif;
 						padding: 15px 25px;
 						border-radius: 15px;
@@ -228,20 +236,30 @@ body {
 						transition: all 0.4s ease;
 					}
 
+					.toobox__new-projekt {
+						display: block;
+					}
+
+					.toolbox__options {
+						display: block;
+					}
+
 					.toolbox__btn:hover {
 						background: $backgound-button-color-hover;
 					}
 
-					// .toolbox__number {
-					// 	padding: 15px;
-					// 	max-width: 70px;
-					// 	align-items: center;
-					// 	border-radius: 15px;
-					// 	border: none;
-					// 	font-size: 15px;
-					// }
+					.toolbox__number {
+						display: none;
+						padding: 15px;
+						max-width: 70px;
+						align-items: center;
+						border-radius: 15px;
+						border: none;
+						font-size: 15px;
+					}
 
 					.toolbox__color {
+						display: none;
 						padding: 10px 10px;
 						height: 50px;
 						width: 70px;
