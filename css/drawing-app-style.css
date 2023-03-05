@@ -21,8 +21,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-body .popup-info {
+body .popup {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   display: none;
   min-width: 90%;
   min-height: 95%;
@@ -39,7 +42,7 @@ body .popup-info {
   z-index: 5;
 }
 
-body .popup-info .popup-info__container {
+body .popup .popup__container {
   position: absolute;
   padding: 10px 20px 100px 20px;
   display: -webkit-box;
@@ -64,28 +67,28 @@ body .popup-info .popup-info__container {
   z-index: 2;
 }
 
-body .popup-info .popup-info__container h4 {
+body .popup .popup__container h4 {
   padding: 20px 0 10px 0;
   font-size: 30px;
   font-style: italic;
   color: #d21919;
 }
 
-body .popup-info .popup-info__container h2 {
+body .popup .popup__container h2 {
   font-style: italic;
   color: #d21919;
 }
 
-body .popup-info .popup-info__container h1 {
+body .popup .popup__container h1 {
   padding-top: 20px;
   font-size: 30px;
 }
 
-body .popup-info .popup-info__container::-webkit-scrollbar {
+body .popup .popup__container::-webkit-scrollbar {
   display: none;
 }
 
-body .popup-info .popup-info__conteiner-fotter {
+body .popup .popup__conteiner-fotter {
   position: absolute;
   display: none;
   display: -webkit-box;
@@ -115,7 +118,13 @@ body .popup-info-active {
   display: flex;
 }
 
-body .close-popup-info__btn {
+body .popup-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .btn-close {
   font-family: 'Poppins', sans-serif;
   padding: 15px 25px;
   border-radius: 15px;

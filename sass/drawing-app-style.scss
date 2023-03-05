@@ -24,9 +24,9 @@ body {
 
 	
 
-	.popup-info {
+	.popup {
 		position: absolute;
-		// display: flex;
+		display: flex;
 		display: none;
 		min-width: 90%;
 		min-height: 95%;
@@ -44,7 +44,7 @@ body {
 
 		z-index: 5;
 
-		.popup-info__container {
+		.popup__container {
 			position: absolute;
 			padding: 10px 20px 100px 20px;
 			display: flex;
@@ -79,10 +79,10 @@ body {
 			}
 		}
 
-		.popup-info__container::-webkit-scrollbar {
+		.popup__container::-webkit-scrollbar {
 			display: none;
 		}
-		.popup-info__conteiner-fotter {
+		.popup__conteiner-fotter {
 			position: absolute;
 			display: none;
 			display: flex;
@@ -110,7 +110,11 @@ body {
 		display: flex;
 	}
 
-	.close-popup-info__btn {
+	.popup-options{
+		display: flex;
+	}
+
+	.btn-close {
 		font-family: 'Poppins', sans-serif;
 		padding: 15px 25px;
 		border-radius: 15px;
