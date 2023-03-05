@@ -4,6 +4,7 @@ $backgound-button-color-hover: rgba(9, 94, 180, 0.89);
 $toolbox-background-color: rgb(195, 113, 41);
 $background-popup-color: rgba(210, 200, 200, 0.975);
 $red-head-color: rgb(210, 25, 25);
+$border-color: rgba(195, 113, 41, 0.89);
 
 
 *,
@@ -33,7 +34,7 @@ body {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		border: 5px solid rgba(195, 113, 41, 0.89);
+		border: 5px solid $toolbox-background-color;
 		border-radius: 20px;
 		box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4),
 			5px 5px 15px rgba(133, 77, 27, 0.4),
@@ -93,8 +94,8 @@ body {
 			justify-content: center;
 			align-items: center;
 			background: $background-popup-color;
-			border-bottom-right-radius: 20px;
-			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
 			box-shadow: -5px 0px 15px rgba(133, 77, 27, 0),
 				5px 0px 15px rgba(133, 77, 27, 0.4),
 				inset 5px -5px 15px rgba(133, 77, 27, 0.4),

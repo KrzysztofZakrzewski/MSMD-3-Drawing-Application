@@ -33,7 +33,7 @@ body .popup {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 5px solid rgba(195, 113, 41, 0.89);
+  border: 5px solid #c37129;
   border-radius: 20px;
   -webkit-box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4), 5px 5px 15px rgba(133, 77, 27, 0.4), inset -5px -5px 15px rgba(133, 77, 27, 0.4), inset 5px 5px 15px rgba(133, 77, 27, 0.4);
           box-shadow: -5px -5px 15px rgba(133, 77, 27, 0.4), 5px 5px 15px rgba(133, 77, 27, 0.4), inset -5px -5px 15px rgba(133, 77, 27, 0.4), inset 5px 5px 15px rgba(133, 77, 27, 0.4);
@@ -104,8 +104,8 @@ body .popup .popup__conteiner-fotter {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(210, 200, 200, 0.975);
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   -webkit-box-shadow: -5px 0px 15px rgba(133, 77, 27, 0), 5px 0px 15px rgba(133, 77, 27, 0.4), inset 5px -5px 15px rgba(133, 77, 27, 0.4), inset -5px 0px 15px rgba(133, 77, 27, 0);
           box-shadow: -5px 0px 15px rgba(133, 77, 27, 0), 5px 0px 15px rgba(133, 77, 27, 0.4), inset 5px -5px 15px rgba(133, 77, 27, 0.4), inset -5px 0px 15px rgba(133, 77, 27, 0);
   border-top: 1px solid gray;
