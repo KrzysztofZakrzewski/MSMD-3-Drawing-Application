@@ -81,6 +81,12 @@ body {
 				padding: 15px 10px;
 				display: inline-block;
 				width: 100%;
+				// for 1024 px !!!!!!!!!!!!!!!!!!!
+				// display: flex;
+				// flex-direction: column;
+				// justify-content: center;
+				// align-items: center;
+				// gap: 10px;
 				// background-color: rgba(255, 0, 0, 0.572);
 				border-top: 1px solid $section-separator-color;
 				input,
@@ -91,8 +97,10 @@ body {
 
 			.section-langue {
 				display: flex;
+				// for 2014 px !!!!!!!!!!!!!!!!!!!!!!!!!
+				// flex-direction: row;
 				justify-content: space-evenly;
-				// align-items: center;
+				align-items: center;
 				label {
 					display: flex;
 					flex-direction: column;
@@ -118,13 +126,13 @@ body {
 					background-image: url('/img/flags/ukr_flag.png');
 				}
 			}
-			.popup-section:last-child {
+			.warning {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 			}
-			.popup-section:last-child > :first-child {
+			.warning_p {
 				color: $red-head-color;
 				font-weight: bold;
 			}

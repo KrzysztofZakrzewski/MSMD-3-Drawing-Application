@@ -103,6 +103,9 @@ body .popup .popup__container .section-langue {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .popup .popup__container .section-langue label {
@@ -136,7 +139,7 @@ body .popup .popup__container .section-langue .ukr {
   background-image: url("/img/flags/ukr_flag.png");
 }
 
-body .popup .popup__container .popup-section:last-child {
+body .popup .popup__container .warning {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,7 +155,7 @@ body .popup .popup__container .popup-section:last-child {
           align-items: center;
 }
 
-body .popup .popup__container .popup-section:last-child > :first-child {
+body .popup .popup__container .warning_p {
   color: #d21919;
   font-weight: bold;
 }
