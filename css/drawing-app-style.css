@@ -363,6 +363,46 @@ body .close-popup-info__btn:hover {
   background: rgba(9, 94, 180, 0.89);
 }
 
+@media (min-width: 720px) {
+  body .popup {
+    min-width: 600px;
+  }
+  body .popup .popup__container .popup-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(195, 113, 41, 0.235);
+  }
+  body .popup .popup__container .section-langue {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body .popup .popup-options__container:nth-child(n) .popup-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
 @media (min-width: 1024px) {
   body .wrapper .box .toolbox .toobox-wrap .save {
     display: -webkit-box;
