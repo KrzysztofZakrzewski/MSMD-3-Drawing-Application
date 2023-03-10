@@ -1,5 +1,10 @@
 // Take all ratio elements with name "option"
 const radioButtons = document.getElementsByName("option");
+const dicription = document.querySelector(".p1_discription_lang")
+function translateForEnglish() {
+
+    
+}
 
 
 radioButtons.forEach(button => {
@@ -16,6 +21,7 @@ radioButtons.forEach(button => {
           // polish
         //   changeLanguageContent("", "Wybrano", "");
         console.log("pl");
+        
           break;
         case "option3":
           // ukrainian
