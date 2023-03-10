@@ -5,20 +5,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/drawing-app-style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="popup popup-options" id="options">
+        <div class="popup__container popup-options__container">
+            <h4>Quic & Fast</h4>
+            <h2>Drawing app</h2>
+            <h1>Options</h1>
+            <div class="popup-section">
+                <button class="toolbox__btn toobox__new-project btn" id="new-project-popup">Clear</button>
+            </div>
+            <div class="popup-section">
+                <p>Size:</p>
+                <input class="toolbox__number" type="number" value="10" id="size-popup">
+            </div>
+            <div class="popup-section">
+                <p>Color:</p>
+                <input class="toolbox__color" type="color" id="color-popup">
+            </div>
+            <div class="popup-section">
+                <button class="toolbox__btn toolbox__save btn" id="save-img-popup">Save</button>
+            </div>
+            
+        </div>
+        <div class="popup__conteiner-fotter popup-options__conteiner-fotter">
+            <button class="close-popup-options__btn btn-close btn">Close</button>
+            <button class="open__instructions-btn btn">Instructions</button>
+        </div>
+    </div>
+
+    <div class="popup popup-info popup-info-active" id="info">
+        <div class="popup__container popup-info__container">
+            <h4>Quic & Fast</h4>
+            <h2>Drawing app</h2>
+            <h1>Instructions</h1>
+            <div class="popup-section section-langue">
+              <label>
+                <span class="en"></span>
+                <input type="radio" name="option" value="option1">
+                <!-- <span class="dot"></span> -->
+              </label>
+              <label>
+                <span class="pl"></span>
+                <input type="radio" name="option" value="option2">
+                <!-- <span class="dot"></span> -->
+              </label>
+              <label>
+                <span class="ukr"></span>
+                <input type="radio" name="option" value="option3">
+                <!-- <span class="dot"></span> -->
+              </label>
+            </div>
+            <div class="popup-section">
+              <p>To jest aplikacja służąca do szybkiego tworzeniasz małych obrazków, można je zapisać na dysk, wysłaść znajomemu lub zrobić co chcesz.</p>
+            </div>
+            <div class="popup-section">
+                <p>Rozmiar:<p>
+                <input class="toolbox__number deaf-input" type="number" value="10" readonly>
+                <br>
+                <p>Służy do wybrania rozmiaru rysowanej lini.</p>
+            </div>
+            <div class="popup-section">
+                <p>Kolor:<p>
+                    <input class="toolbox__color deaf-color-info" type="color" disabled>
+                <br>
+                <p>Służy do wybrania koloru rysowanej lini.</p>
+            </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Clear</button>
+                <br>
+                <p>Służy do wybrania wymazania tego co już narysowaliśmy.</p>
+            </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Save</button>
+                <br>
+                <p>Służy do zapisania naszego obrazka na dysku.</p>
+            </div>
+            <div class="popup-section">
+                <p>Przycisk:<p>
+                    <button class="deaf-btn btn" disabled>Options</button>
+                <br>
+                <p>Służy do otworzenia okienka z opcjami</p>
+            </div>
+            <div class="popup-section warning">
+                <p class="warning_p">Uwaga<p>
+                <p>Jeżeli w trakcie rysowania zmieni się rodzielczość np: obracając telefon lub tablet to rysunek się wymarze tak jakbyś urzył przycisku Clear</p>
+            </div>
+        </div>
+        <div class="popup__conteiner-fotter popup-info__conteiner-fotter">
+            <button class="close-popup-info__btn btn-close btn">Close</button>
+        </div>
+    </div>
+
 
     <div class="wrapper">
         <div class="box">
             <div class="toolbox">
                 <div class="toobox-wrap">
-                    <button class="toolbox__btn" id="new-projekt">Clear</button>
-                    <input class="toolbox__number" type="number" value="10"  id="size">
+                    <button class="toolbox__btn toobox__new-project" id="new-project">Clear</button>
+                    <input class="toolbox__number" type="number" value="10" id="size">
                     <input class="toolbox__color" type="color" id="color">
-                    <button class="toolbox__btn save" id="save-img">Save</button>
+                    <button class="toolbox__btn toolbox__save" id="save-img">Save</button>
+                    <button class="toolbox__btn toolbox__options options" id="options">Options</button>
                 </div>
             </div>
             <canvas width="700" height="400" class="drawing-table" id="canvas"></canvas>
@@ -26,6 +122,7 @@
     </div>
 
     <script src="js/drawing-app-script.js"></script>
+    <script src="js/drawing-app-interface.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 // VARIABLES
 
 const canvas = document.getElementById('canvas');
-const newProjektBtn = document.getElementById('new-projekt');
+const newProjectBtn = document.getElementById('new-project');
 const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
 const saveImg = document.getElementById('save-img');
@@ -239,7 +239,7 @@ makeBackgroundWhite();
 // EventLitener for desktop
 
 // this eventListener activate function "clearProject"
-newProjektBtn.addEventListener('click', clearProject);
+newProjectBtn.addEventListener('click', clearProject);
 
 // this event activate function "setLineSizeBasedOnInputValue()"
 sizeInput.addEventListener('change', setLineSizeBasedOnInputValue);
