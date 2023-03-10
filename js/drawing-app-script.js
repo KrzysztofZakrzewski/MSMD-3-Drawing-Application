@@ -6,6 +6,8 @@ const canvas = document.getElementById('canvas');
 const newProjectBtn = document.getElementById('new-project');
 const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
+const sizeInputPopup = document.getElementById('size-popup');
+const colorInputPopup = document.getElementById('color-popup');
 const saveImg = document.getElementById('save-img');
 let parentOfCanvas = canvas.parentNode;
 
@@ -33,7 +35,7 @@ function setCanvasSize() {
 		}
 	}
 
-	let imageData = canvas.toDataURL("image/png");
+	let imageData = canvas.toDataURL('image/png');
 
 	// Set the height of the canvas to the height of its parent element without the height of its other children.
 	canvas.height = canvasParentRect.height - siblingsHeight;
@@ -234,6 +236,7 @@ function stopDrawingMobile() {
 
 setCanvasSize();
 makeBackgroundWhite();
+// synchronizationOfInputs();
 
 // EVENTS
 // EventLitener for desktop
