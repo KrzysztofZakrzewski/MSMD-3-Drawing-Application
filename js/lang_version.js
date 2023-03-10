@@ -9,15 +9,18 @@ radioButtons.forEach(button => {
         case "option1":
           // engish
         //   changeLanguageContent("Selected", "", "");
+        console.log("eng");
 
           break;
         case "option2":
           // polish
         //   changeLanguageContent("", "Wybrano", "");
+        console.log("pl");
           break;
         case "option3":
           // ukrainian
         //   changeLanguageContent("", "", "Обрано");
+        console.log("ekr");
           break;
         default:
           // defolt statement
@@ -26,4 +29,3 @@ radioButtons.forEach(button => {
     });
   });
 
-  
