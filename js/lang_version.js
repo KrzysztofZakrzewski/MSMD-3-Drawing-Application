@@ -78,7 +78,7 @@ function translateForEnglish() {
 	p2InfoOptionsLang.textContent = 'It is used to open a window with options.';
 	p1WaringInfoLang.textContent = 'Warning';
 	p2WaringInfoLang.textContent =
-		'If the resolution changes while drawing, for example, by rotating the phone or tablet, the drawing will be erased as if you had used the Clear button.';
+		'If the resolution changes while drawing, for example by rotating the phone or tablet, the drawing will be completely or partially erased as if you had used the clear button, and the application may not work properly.';
 	buttonInfoCloseLang.textContent = 'Close';
 	// toolbox
 	buttonTbClearLang.textContent = 'Clear';
@@ -114,7 +114,7 @@ function translateForPolish() {
 	p2InfoOptionsLang.textContent = 'Służy do otwierania okna z opcjami.';
 	p1WaringInfoLang.textContent = 'Uwaga';
 	p2WaringInfoLang.textContent =
-		'Jeśli rozdzielczość zmieni się podczas rysowania, na przykład przez obrócenie telefonu lub tabletu, rysunek zostanie wymazany, tak jakbyś użył przycisku Wyczyść.';
+		'Jeśli rozdzielczość zmieni się podczas rysowania, na przykład przez obrócenie telefonu lub tabletu, rysunek zostanie całkowicie lub w części wymazany, tak jakbyś użył przycisku wyczyść, a aplikacja może działać niepoprawnie.';
 	buttonInfoCloseLang.textContent = 'Zamknij';
 	buttonTbClearLang.textContent = 'Wyczyść';
 	buttonTbSaveLang.textContent = 'Zapisz';
@@ -152,7 +152,7 @@ function translateForUkrainian() {
 		'Це використовується для відкриття вікна з налаштуваннями.';
 	p1WaringInfoLang.textContent = 'Увага';
 	p2WaringInfoLang.textContent =
-		'Якщо під час малювання змінюється роздільна здатність, наприклад, внаслідок обертання телефону або планшета, малюнок буде стертий, ніби ви використали кнопку Очистити.';
+		'Якщо під час малювання змінюється роздільна здатність, наприклад, при повороті телефону або планшета, малюнок буде повністю або частково витертий, ніби ви використали кнопку очистити, а додаток може працювати неправильно.';
 	buttonInfoCloseLang.textContent = 'Закрити';
 	buttonTbClearLang.textContent = 'видалити';
     buttonTbSaveLang.textContent = 'Зберегти'
