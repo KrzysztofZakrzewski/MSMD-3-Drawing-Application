@@ -126,7 +126,7 @@ function stopDrawing() {
 	y = null;
 }
 
-function sychSizeInputus() {
+function synchSizeInputus() {
 	// set size from tollbox as priminary
 	size = parseInt(sizeInput.value);
 
@@ -260,7 +260,7 @@ function stopDrawingMobile() {
 
 setCanvasSize();
 makeBackgroundWhite();
-sychSizeInputus();
+synchSizeInputus();
 
 // EVENTS
 // EventLitener for desktop
