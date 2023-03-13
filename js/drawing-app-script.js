@@ -127,8 +127,10 @@ function stopDrawing() {
 }
 
 function sychSizeInputus() {
-	let size = parseInt(sizeInput.value);
+	// set size from tollbox as priminary
+	size = parseInt(sizeInput.value);
 
+	//
 	sizeInput.addEventListener('input', () => {
 		size = parseInt(sizeInput.value);
 		updateSizeInputPopup();
@@ -147,8 +149,6 @@ function sychSizeInputus() {
 		sizeInputPopup.value = size;
 	}
 }
-
-sychSizeInputus();
 
 //
 // this function changes the size of the line based on the value taken from the input of "toolbox__number"
@@ -260,7 +260,7 @@ function stopDrawingMobile() {
 
 setCanvasSize();
 makeBackgroundWhite();
-// synchronizationOfInputs();
+sychSizeInputus();
 
 // EVENTS
 // EventLitener for desktop
