@@ -126,6 +126,30 @@ function stopDrawing() {
 	y = null;
 }
 
+function sychSizeInputus() {
+	let size = parseInt(sizeInput.value);
+
+	sizeInput.addEventListener('input', () => {
+		size = parseInt(sizeInput.value);
+		updateSizeInputPopup();
+	});
+
+	sizeInputPopup.addEventListener('input', () => {
+		size = parseInt(sizeInputPopup.value);
+		updateSizeInput();
+	});
+
+	function updateSizeInput() {
+		sizeInput.value = size;
+	}
+
+	function updateSizeInputPopup() {
+		sizeInputPopup.value = size;
+	}
+}
+
+sychSizeInputus();
+
 //
 // this function changes the size of the line based on the value taken from the input of "toolbox__number"
 function setLineSizeBasedOnInputValue() {

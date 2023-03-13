@@ -331,7 +331,6 @@ body .wrapper .box .toolbox .toobox-wrap .toolbox__btn:hover {
 }
 
 body .wrapper .box .toolbox .toobox-wrap .toolbox__number {
-  display: none;
   padding: 15px;
   max-width: 70px;
   -webkit-box-align: center;
