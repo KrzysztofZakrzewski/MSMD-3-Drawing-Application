@@ -4,11 +4,13 @@
 
 const canvas = document.getElementById('canvas');
 const newProjectBtn = document.getElementById('new-project');
+const buttonOptClear = document.getElementById('new-project-popup');
 const sizeInput = document.getElementById('size');
 const colorInput = document.getElementById('color');
 const sizeInputPopup = document.getElementById('size-popup');
 const colorInputPopup = document.getElementById('color-popup');
 const saveImg = document.getElementById('save-img');
+const saveImgPopup = document.getElementById('save-img-popup');
 let parentOfCanvas = canvas.parentNode;
 
 const context = canvas.getContext('2d');
@@ -291,6 +293,8 @@ synchColorInputus();
 // this eventListener activate function "clearProject"
 newProjectBtn.addEventListener('click', clearProject);
 
+buttonOptClear.addEventListener('click', clearProject);
+
 // this event activate function "setLineSizeBasedOnInputValue()"
 sizeInput.addEventListener('change', setLineSizeBasedOnInputValue);
 
@@ -307,6 +311,8 @@ canvas.addEventListener('mousemove', constantLineDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 
 saveImg.addEventListener('click', saveImgFromCanvas);
+
+saveImgPopup.addEventListener('click', saveImgFromCanvas);
 
 window.addEventListener('resize', resizeCanvasWithSizeOfWindow);
 
