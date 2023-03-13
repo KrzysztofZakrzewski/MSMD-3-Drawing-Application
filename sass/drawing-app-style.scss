@@ -98,10 +98,11 @@ body {
 				}
 
 				span {
-					display: inline-block;
+					display: flex;
 					margin-bottom: 10px;
 					width: 39px;
 					height: 35px;
+					justify-content: center;
 
 					background-position: center;
 					background-size: cover;
