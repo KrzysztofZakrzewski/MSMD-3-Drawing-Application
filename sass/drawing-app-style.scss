@@ -251,6 +251,9 @@ body {
 					column-gap: 20px;
 
 					// ADD display: NONE for look how !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+					p {
+						display: none;
+					}
 
 					.toolbox__btn {
 						display: none;
@@ -278,9 +281,9 @@ body {
 					}
 
 					.toolbox__number {
-						// display: none;
+						display: none;
 						padding: 15px;
-						max-width: 70px;
+						width: 70px;
 						align-items: center;
 						border-radius: 15px;
 						border: none;
@@ -289,8 +292,8 @@ body {
 
 					.toolbox__color {
 						display: none;
-						padding: 10px 10px;
-						height: 50px;
+						padding: 5px 6px;
+						height: 40px;
 						width: 70px;
 						max-width: 70px;
 						margin: 9px 0px;
@@ -347,7 +350,7 @@ body {
 				}
 			}
 		}
-		
+
 		.popup-options {
 			position: absolute;
 			// top: 0;
@@ -362,7 +365,19 @@ body {
 			.box {
 				.toolbox {
 					.toobox-wrap {
-						.save {
+						p {
+							display: block;
+							color: #ffff;
+						}
+						.toolbox__number {
+							display: flex;
+						}
+
+						.toolbox__color {
+							display: flex;
+						}
+
+						.toolbox__save {
 							display: flex;
 						}
 					}
