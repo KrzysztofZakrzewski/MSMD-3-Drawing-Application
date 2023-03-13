@@ -150,6 +150,28 @@ function synchSizeInputus() {
 	}
 }
 
+function synchColorInputus() {
+	// color = document.getElementById('color').value;
+
+	colorInput.addEventListener('input', () => {
+		color = colorInput.value;
+		updateColorInputPopup();
+	});
+
+	colorInputPopup.addEventListener('input', () => {
+		color = colorInputPopup.value;
+		updateColorInput();
+	});
+
+	function updateColorInput() {
+		colorInput.value = color;
+	}
+
+	function updateColorInputPopup() {
+		colorInputPopup.value = color;
+	}
+}
+
 //
 // this function changes the size of the line based on the value taken from the input of "toolbox__number"
 function setLineSizeBasedOnInputValue() {
@@ -261,6 +283,7 @@ function stopDrawingMobile() {
 setCanvasSize();
 makeBackgroundWhite();
 synchSizeInputus();
+synchColorInputus();
 
 // EVENTS
 // EventLitener for desktop
