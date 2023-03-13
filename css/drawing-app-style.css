@@ -367,6 +367,10 @@ body .close-popup-info__btn:hover {
   background: rgba(9, 94, 180, 0.89);
 }
 
+body .btn:hover {
+  background: rgba(9, 94, 180, 0.89);
+}
+
 @media (min-width: 576px) {
   body .popup-options {
     min-width: 400px;
@@ -416,7 +420,7 @@ body .close-popup-info__btn:hover {
   }
   body .popup-options {
     position: absolute;
-    left: 60%;
+    left: 85%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     min-width: 400px;

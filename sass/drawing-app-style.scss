@@ -317,6 +317,10 @@ body {
 		background: $backgound-button-color-hover;
 	}
 
+	.btn:hover {
+		background: $backgound-button-color-hover;
+	}
+
 	@media (min-width: 576px) {
 		.popup-options {
 			min-width: 400px;
@@ -354,7 +358,7 @@ body {
 		.popup-options {
 			position: absolute;
 			// top: 0;
-			left: 60%;
+			left: 85%;
 			transform: translate(-50%, -50%);
 			min-width: 400px;
 		}
